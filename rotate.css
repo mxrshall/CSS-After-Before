@@ -1,0 +1,59 @@
+body{
+    background-color: gray;
+}
+
+.square{
+    height: 350px;
+    width: 350px;
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.square::before{
+    content: "";
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    background: conic-gradient(black, yellow); 
+    animation: rotate 3s infinite linear;
+    
+}
+
+@keyframes rotate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.square::after{
+    content: "Text";
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 335px;
+    width: 335px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: black;
+    border-radius: 10px;
+
+}
