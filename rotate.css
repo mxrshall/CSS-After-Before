@@ -2,6 +2,52 @@ body{
     background-color: gray;
 }
 
+.circle{
+    height: 350px;
+    width: 350px;
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle::before{
+    content: "";
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    background: conic-gradient(black, yellow); 
+    animation: rotate 3s infinite linear;
+    
+}
+
+.circle::after{
+    content: "Text";
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 335px;
+    width: 335px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: black;
+    border-radius: 50%;
+
+}
+
 .square{
     height: 350px;
     width: 350px;
@@ -9,7 +55,7 @@ body{
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
+    left: 30%;
     border-radius: 10px;
     overflow: hidden;
 }
